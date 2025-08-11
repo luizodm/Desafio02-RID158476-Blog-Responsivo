@@ -1,6 +1,6 @@
 html {
     font-family: Montserrat, sans-serif;
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     box-sizing: border-box;
     font-size: 14px;
@@ -27,6 +27,8 @@ header {
     display: flex;
     align-items: center;
     font-size: 1.2rem;
+    padding-left: 7.5rem;
+    max-width: 100%;
 }
 
 section {
@@ -45,6 +47,12 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+}
+
+h1,
+h2 {
+    cursor: pointer;
 }
 
 .container {
@@ -52,7 +60,7 @@ footer {
 }
 
 .banner {
-    margin: 0 0 2rem 7.5rem;
+    margin: 0 0 1rem 7.5rem;
     padding: 0 0 1rem 1rem;
     background-image: url(/assets/banner.jpg);
     background-size: cover;
@@ -62,7 +70,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    height: 600px;
+    height: 25.5rem;
 }
 
 .banner p,
@@ -98,6 +106,7 @@ footer {
 .card {
     border-radius: 0.75rem;
     background-color: white;
+    width: 100%;
 }
 
 .card>img {
@@ -143,8 +152,58 @@ li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    cursor: pointer;
 }
 
 li>p {
     margin: 0.5rem;
+}
+
+@media only screen and (max-width: 767px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
+
+    header {
+        padding-left: 0rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+    aside {
+        margin-right: 0;
+        width: 90%;
+    }
+
+    footer {
+        width: 100%;
+    }
+
+    .container {
+        padding: 0 1rem 0 1rem;
+    }
+
+    .banner {
+        margin: 0 1rem 1rem 1rem;
+        padding: 0 0 1rem 1rem;
+        max-height: 100%;
+    }
+
+    .banner>h1 {
+        font-size: 1.4rem;
+    }
+
+    .recentPosts {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .popPosts {
+        padding: 0;
+    }
 }
